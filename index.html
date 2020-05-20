@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+  <meta charset="utf-8">
+  <title>Arla Gården+</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Arla Gården +">
+  <meta name="author" content="Anders Kunnerup, Jonas Kløjgård & Nikolaj Egeskov">
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css"/>
+  <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+</head>
+
+
+
+<body class="app">
+  <!-- NAVIGATION TABBAR/SIDEBAR -->
+  <nav id="tabbar" class="tabbar hide">
+<div class="tab_left">
+    <a href="#home"><div class="home"></div>hjem</a>
+    <a href="#dashboard"><div class="dash"></div>dashboard</a>
+  </div>
+
+    <a class="challenge" href="#challenge"><div class="challengeicon"></div>mål</a>
+    <div class="tab_right">
+    <a href="#enterData"><div class="enter"></div>indtast</a>
+    <a href="#home" onclick="openSetup()"><div class="settings"></div>indstillinger</a>
+</div>
+  </nav>
+
+  <section id="content"></section>
+
+  <!-- FIREBASE -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="firebase-config.js"></script>
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

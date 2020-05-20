@@ -1,0 +1,1774 @@
+/* ---------- ROOT ---------- */
+:root {
+  --light_background: #DFE7E6;
+  --darkgreen: #137D4E;
+  --textgreen: #006C3A;
+  --bottomgreen: #44916F;
+  --lightgrey: #C3CBCE;
+  --greytext: #334856;
+}
+
+/*ARLA FONTE*/
+@font-face {
+  font-family: "Arla";
+  src: url("../fonts/arlaifbd.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arlaifbd.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/arlaifbd.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/arlaifbd.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/arlaifbd.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/arlaifbd.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/arlaifbd.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Arla Normal Font Face */
+@font-face {
+  font-family: "Arla";
+  src: url("../fonts/arlaifrg.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arlaifrg.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/arlaifrg.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/arlaifrg.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/arlaifrg.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/arlaifrg.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/arlaifrg.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Arla Light Font Face */
+@font-face {
+  font-family: "Arla";
+  src: url("../fonts/arlaiflt.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/arlaiflt.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("../fonts/arlaiflt.otf") format("opentype"),
+    /* Open Type Font */
+    url("../fonts/arlaiflt.svg") format("svg"),
+    /* Legacy iOS */
+    url("../fonts/arlaiflt.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+    url("../fonts/arlaiflt.woff") format("woff"),
+    /* Modern Browsers */
+    url("../fonts/arlaiflt.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* ---------- OVERALL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: var(--textgreen);
+  background-color: var(--light_background);
+  font-family: 'Arla', Helvetica, Arial, sans-serif;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+
+.hideonmobile {
+  display: none;
+}
+
+.tabbarclear {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+}
+
+#greenb, #greenb2 {
+  background-color: var(--bottomgreen);
+  padding: 10px 15px;
+  width: auto;
+  color: white;
+  font-weight: lighter;
+  font-size: 11px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 10px var(--lightgrey);
+}
+
+#whiteb {
+  border: 1px solid var(--bottomgreen);
+  padding: 10px 15px;
+  width: auto;
+  color: var(--bottomgreen);
+  font-weight: lighter;
+  font-size: 11px;
+  border-radius: 3px;
+  box-shadow: 4px 4px 10px var(--lightgrey);
+}
+
+/* ---------- TOPBAREN MED SIDETITEL ---------- */
+.topbar {
+  background-color: var(--light_background);
+  color: var(--textgreen);
+  padding: 13.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.topbar a.left {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  text-decoration: none;
+  height: 20px;
+  width: 20px;
+}
+
+header h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1.1em;
+}
+
+/* ---------- TABBAR I BuNDEN ---------- */
+.tabbar {
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.tab_left, .tab_right {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 40%;
+}
+
+.tab_left {
+  left: 0;
+}
+
+.tab_right {
+  right: 0;
+}
+
+/* LINKS I TABBAREN */
+.tabbar a {
+  color: var(--greytext);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tabbar a.active .home {
+  background-image: url(images/navigation/home_color.svg);
+}
+
+.tabbar a.active .dash {
+  background-image: url(images/navigation/dash_color.svg);
+}
+
+.tabbar a.active .challengeicon {
+  background-image: url(images/navigation/challenge_color.svg);
+}
+
+.tabbar a.active .enter {
+  background-image: url(images/navigation/data_color.png);
+}
+
+.home, .dash, .challengeicon, .enter, .settings {
+  height: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.home {
+  background-image: url(images/navigation/home_grey.svg);
+}
+
+.dash {
+  background-image: url(images/navigation/dash_grey.svg);
+}
+
+.challengeicon {
+  background-image: url(images/navigation/challenge_grey.svg);
+}
+
+.enter {
+  background-image: url(images/navigation/data_grey.png);
+}
+
+.settings {
+  background-image: url(images/navigation/setup_grey.svg);
+}
+
+/*CHALLENGE BUTTON*/
+.challenge {
+  background-color: #EBEBEC;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px grey;
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 22px;
+}
+
+/* ---------- STYLING AF DE ENKELTE SIDER ---------- */
+.page {
+  display: none;
+  background: var(--light-grey);
+  animation: fadeIn 0.4s;
+  padding: 55px 0;
+}
+
+/*HOME*/
+#home {
+  background-color: white;
+}
+
+#home .topbar {
+  background-color: white;
+}
+
+.logud {
+  position: absolute;
+  left: 20px;
+  z-index: 1000;
+  padding-top: 20px;
+  color: var(--lightgrey);
+}
+
+.smalledit {
+  height: 20px;
+  position: absolute;
+  right: 20px;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+#home form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  background-color: var(--greytext);
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 6px;
+}
+
+#home form input {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid var(--darkgreen);
+}
+
+#home form button {
+  width: auto;
+  margin: auto;
+  padding: 10px 20px;
+  background-color: var(--bottomgreen);
+  border: none;
+  color: white;
+}
+
+.image-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+}
+
+#profile {
+  width: 100%;
+}
+
+#profile p {
+  margin-bottom: 35px;
+}
+
+#pb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#calltoaction {
+  display: flex;
+  justify-content: space-around;
+  width: 72%;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+#calltoaction a {
+  text-decoration: none;
+}
+
+#keydata {
+  width: 95%;
+  border-radius: 6px;
+  padding-top: 20px;
+  margin: auto;
+  background-color: var(--light_background);
+  color: var(--greytext);
+}
+
+#keydata div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#keydata div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  width: 27%;
+}
+
+#keydata h3 {
+  font-weight: lighter;
+}
+
+#keydata h4 {
+  font-size: 1.5em;
+}
+
+#keydata div div p {
+  margin-top: 10px;
+  font-size: 0.8em;
+  font-weight: lighter;
+}
+
+#keydata .greenspan {
+  font-size: 2.5em;
+  font-weight: bolder;
+  color: var(--darkgreen);
+}
+
+#keydata .redspan {
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+
+div#fulllength {
+  border-top: var(--lightgrey) 2px solid;
+  flex-grow: 3;
+}
+
+#borders {
+  border-left: var(--lightgrey) 2px solid;
+  border-right: var(--lightgrey) 2px solid;
+}
+
+#bestresults {
+  padding: 10px;
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+#bestresults div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  min-width: 120px;
+  max-width: 120px;
+  padding: 10px;
+  background-color: #CFFCDC;
+  border: 3px solid var(--darkgreen);
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#bestresults h3 {
+  font-size: 0.9em;
+  padding-bottom: 20px;
+}
+
+#bestresults h2 {
+  font-size: 1.3em;
+}
+
+.alignleft {
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 50px;
+  font-size: 1.1em;
+}
+
+#badgets {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+#badgets::-webkit-scrollbar, #bestresults::-webkit-scrollbar {
+  display: none;
+}
+
+#badgets div {
+  min-width: 140px;
+  max-width: 140px;
+  font-size: 0.6em;
+}
+
+#badgets div img {
+  width: 50%;
+}
+
+#updateProfile {
+  display: none;
+}
+
+#updateProfile.show {
+  display: block;
+  animation: fadeIn 0.4s;
+}
+
+/*DASHBOARD*/
+#mostimportantdash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 35px;
+}
+
+#dashboard h3, #dashboard p {
+  color: white;
+}
+
+#rightimpotant, .cards{
+  background-color: var(--darkgreen);
+  border-radius: 6px;
+  width: 95%;
+  margin: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 25px;
+}
+
+#cards {
+  display: flex;
+  overflow: hidden;
+  overflow-x: scroll;
+}
+
+.cards {
+  margin-left: 10px;
+    height: 250px;
+    width: 90%;
+}
+
+.cards canvas {
+  height: 90% !important;
+}
+
+#double {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#double div {
+  width: 48%;
+  border-radius: 6px;
+  padding-top: 25px;
+}
+
+#double div h3 {
+  color: var(--darkgreen);
+}
+
+
+/*dashboard slider*/
+
+.slider {
+  width: 220px;
+  height: 220px;
+  background: var(--greytext);
+  border-radius: 50%;
+    -webkit-appearance: none;
+  margin: auto;
+    margin-top: 10px;
+    outline:none;
+}
+
+.slider::before{
+  content: "1 kg pr. år";
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 98px;
+  color: var(--greytext);
+  width: 35px;
+  font-size: 0.85em;
+  text-align: right;
+}
+
+.slider::after{
+  content: "100 kg pr. år";
+  position: absolute;
+  margin-left: 224px;
+  margin-top: 98px;
+  color: var(--greytext);
+  width: 42px;
+  font-size: 0.85em;
+}
+
+.slider:hover {
+   filter: brightness(110%);
+   outline:none;
+}
+
+.slider input:focus {
+    outline:none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: var(--darkgreen);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+#copyslider {
+  display: none;
+}
+
+#inputnumber {
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50%;
+  margin-right: 50%;
+  z-index: 99;
+  font-size: 2em;
+  opacity: 0.8;
+  transform: translateX(-50%)
+}
+
+#infotekst {
+  opacity: 0.8;
+  position: absolute;
+  margin-left: 50%;
+  margin-right: 50%;
+    transform: translateX(-50%);
+    margin-top: -80px;
+}
+
+#footprintfunction {
+margin-top: 100px;
+}
+
+#footprintfunction p  {
+color: var(--darkgreen);
+width:90%;
+margin: auto;
+font-size: 0.95em;
+}
+
+#footprintberegner {
+  width: 90%;
+  background-color: var(--lightgrey);
+  border-radius: 6px;
+  margin: auto;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#changenumbers {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  margin: auto;
+}
+
+#changenumbers div {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+#motivation{
+  width: 90%;
+  padding-top: 30px;
+}
+
+#detailView {
+  display: none;
+}
+
+#detailView.show{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  align-self: center;
+  width: 90vw;
+  background-color: white;
+    box-shadow: var(--greytext) 2px 2px 10px;
+  border-radius: 10px;
+  z-index: 100;
+    padding: 20px;
+}
+
+#detailView p {
+  color: var(--darkgreen);
+}
+
+#detailView div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#close {
+  text-align: right;
+  font-size: 2em;
+  font-weight: bolder;
+padding-top: 20px;
+cursor: pointer;
+}
+
+#detailView canvas {
+  margin-bottom: 50px;
+}
+
+/*CHALLENGE*/
+#challenge #greenb {
+width: 40%;
+margin: auto;
+font-size: 16px;
+margin-top: 35px;
+margin-bottom: 35px;
+}
+
+#halvfemsw {
+  width: 90%;
+  margin: auto;
+  text-align: left;
+}
+
+#rightinright {
+  width: 95%;
+  background: linear-gradient(to bottom, var(--bottomgreen), #EBE8E8);
+  margin: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+}
+
+#flexboxen {
+  display: flex;
+  width: 95%;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: linear-gradient(to top, #FFFFFF, #EBE8E8);
+  margin: auto;
+  margin-top: -1px;
+  color: #7AABAD;
+  padding-bottom: 35px;
+  padding-top: 35px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#motivationmessage {
+  margin-top: 25px;
+}
+
+#flexboxen h3 {
+  width: 32%;
+}
+
+#flexboxen div {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+#dieselCompare {
+  margin-top: 25px;
+}
+
+.smallertext {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+
+.greenspan {
+  color: #7FD380;
+}
+
+.redspan {
+  color:#DD6E6E;
+}
+
+#opret.show{
+  height: auto;
+  width: 90%;
+  background-color: var(--light_background);
+  display: block;
+  margin: auto;
+  box-shadow: var(--greytext) 2px 2px 10px;
+  padding: 10px;
+  padding-top: 45px;
+}
+
+#close {
+  font-size: 20px;
+  float: right;
+  margin-right: 10px;
+  margin-top: -25px;
+}
+
+#opret form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+margin: auto;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+
+#opret form input, #opret form select {
+  padding: 10px;
+  border-radius: 5px;
+margin-bottom: 25px;
+border: 0;
+}
+
+#opret form #when {
+   -webkit-appearance: none;
+     appearance: none;
+  background: white;
+}
+#when::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 10px;
+  background: var(--darkgreen);
+  cursor: pointer;
+}
+
+#challenge h1 {
+  margin-bottom: 15px;
+}
+
+#lastcardchallenge {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+#lasttop {
+  width: 95%;
+background-color: var(--bottomgreen);
+display: flex;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+align-items: center;
+font-size: 13px;
+padding-bottom: 25px;
+}
+
+#lastbot{
+  width: 95%;
+  background: linear-gradient(to bottom, #FFFFFF, #EBE8E8);
+  margin-top: -1px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: var(--darkgreen);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 2px var(--lightgrey);
+}
+
+#lasttop .chartjs-render-monitor {
+  width: 70% !important;
+}
+
+/*DATAINDSAMLING*/
+#enterData header {
+  background-color: white;
+}
+
+#enterData {
+  background-color: var(--light_background);
+}
+
+#enterData h3 {
+  background-color: white;
+  height: 50px;
+  padding-top: 14px;
+  margin-top: -10px;
+}
+
+#inputter {
+  background-color: var(--light_background);
+  padding-bottom: 5%;
+}
+
+#inputdatacow h5, #inputdatafeed h5, #inputdatause h5, #inputdatamilk h5 {
+  margin-left: 5%;
+  text-align: left;
+  font-size: 35px;
+}
+#indtastkasse h4{
+  display: none;
+}
+#inputdatacow, #inputdatafeed, #inputdatause, #inputdatamilk {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: solid white;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  margin-top: 5%;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5px;
+
+}
+
+.buttongem {
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5%;
+  color: var(--textgreen);
+}
+
+#inputdatacow label, #inputdatafeed label, #inputdatause label, #inputdatamilk label    {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+#inputdatacow input, #inputdatafeed input, #inputdatause input, #inputdatamilk input {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  border: var(--lightgrey) 1px solid;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-left: 9%;
+}
+#imageboks{
+  display: none;
+}
+#cowQuest, #feedQuest, #useQuest, #milkQuest {
+  display: none;
+}
+
+#cowQuest.show, #feedQuest.show, #milkQuest.show, #useQuest.show {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s;
+}
+
+#headandarrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cowPercent, .milkPercent, .usePercent, .feedPercent {
+  height: 38px;
+  width: 38px;
+  background-image: url(images/zero.svg);
+  margin-right: 20px;
+}
+
+/* ---------- ANIMATIONER ---------- */
+/* fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- LOADING SCREEN ---------- */
+#loader {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999;
+  overflow: hidden;
+  text-align: center;
+}
+
+.spinner {
+  border: 5px solid var(--lightgrey);
+  border-radius: 50%;
+  border-top: 5px solid var(--textgreen);
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.4s, opacity 0.4s linear;
+}
+
+/* ---------- FIREBASE LOGIN STYLING---------- */
+#firebaseui-auth-container {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.firebaseui-container {
+  font-family: var(--font-family);
+  font: 16px var(--font-family);
+}
+
+.firebaseui-title {
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.firebaseui-button {
+  max-width: 35%;
+}
+
+.mdl-button--raised.mdl-button--colored,
+.mdl-button--raised.mdl-button--colored:active,
+.mdl-button--raised.mdl-button--colored:hover {
+  background: var(--green);
+  color: green;
+  border-radius: 0;
+}
+
+.firebaseui-textfield.mdl-textfield .firebaseui-label::after {
+  background-color: var(--green);
+}
+
+.mdl-button--primary.mdl-button--primary {
+  color: var(--green);
+}
+
+#login header{
+  display: none;
+
+}
+#login{margin: 0;
+  height: 100%;
+}
+#imageloginlaptop{
+  display: none;
+}
+#imageloginmobil{display: block;}
+#billedelogin img{
+  height: 100vh;
+  width: 100%;
+
+}
+ #billedelogin{
+   height: 100%;
+   width: 100%;
+ }
+#logologin{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  position: absolute;
+  top:1%;
+  left: 30%;
+
+
+
+}
+#tekstlogin{
+  position: absolute;
+  top: 29%;
+  left: 17%;
+}
+#tekstlogin h3{
+  font-size: 20px;
+}
+#tekstlogin h4{
+  font-size: 40px;
+}
+#logologin img{
+
+  height: 60%;
+  width: 60%;
+}
+#loginkasse{
+position: absolute;
+
+margin-top: -55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+
+/*Responsive*/
+/*---------------TABLET-----------------*/
+@media (min-width: 600px) {}
+
+/*-----------DESKTOP-------------------*/
+@media (min-width: 992px) {
+/*MENU/GENERAL DEKSTOP*/
+.hideonmobile {
+  display: block;
+}
+
+.hideondesktop {
+  display: none;
+}
+
+.smalledit {
+display: none;
+}
+
+#tabbar {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-content: space-around;
+height: 100vh;
+width: 100px;
+background-color: var(--bottomgreen);
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+flex-wrap: wrap;
+top: 0
+}
+
+.tab_left, .tab_right{
+  display: flex;
+      justify-content: space-around;
+      text-align: center;
+      height: 40%;
+      flex-direction: column;
+      align-items: center;
+}
+
+.tab_left a, .tab_right a{
+  color: white;
+  text-align: inherit;
+  display: flex;
+  align-self: center;
+}
+
+.enter, .challengeicon, .settings, .home, .dash {
+  width: 55px;
+  height: 55px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+justify-content: center;
+}
+
+.challenge {
+  position: inherit;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left:0;
+  background-color: inherit;
+  box-shadow: inherit;
+  left: 18px;
+}
+
+.tabbar a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*PROFILE/HOME DEKSTOP*/
+#home #greenb2, #home #greenb, #home #whiteb{
+height: 180px;
+box-shadow: var(--greytext) 2px 2px 10px;
+border-radius: 10px;
+}
+
+#home #greenb p, #home #greenb2 p, #home #whiteb p {
+  width: 55%;
+}
+
+#home #greenb {
+    background-color: #7AABAD;
+    border-bottom: 100px #EBE8E8 solid;
+    color: white;
+    text-align: left;
+    font-size: 1em;
+}
+
+#home #greenb2 {
+    background: linear-gradient(to bottom, #006C3A, #599A8D);
+    border-bottom: 100px #EBE8E8 solid;
+    color: white;
+    text-align: left;
+    font-size: 1em;
+}
+#home #whiteb {
+    background-color: #E3D064;
+    border-bottom: 100px #EBE8E8 solid;
+    color: white;
+    text-align: left;
+    font-size: 1em;
+}
+
+#home #greenb h2, #home #greenb2 h2, #home #whiteb h2 {
+  margin-top: 35px;
+  margin-bottom: 5px;
+}
+
+#home .topbar {
+  background-color: #63A888;
+}
+
+#calltoaction{
+  position: absolute;
+  top:0;
+  right: 0;
+  height: 460px;
+  width: calc(100vw - 100px);
+  background-color: #63A888;
+  justify-content: center;
+  z-index: 100;
+}
+
+#calltoaction a {
+  width: 27%;
+  height: 180px;
+  margin: 25px;
+  margin-top: 100px;
+}
+
+#calltoaction #keydata {
+  width: 100%;
+  height: 120px;
+  font-size: 0.7em;
+  background-color: #EBE8E8;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 280px;
+  border-radius: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+#calltoaction #keydata div {
+  margin-top: 10px;
+  flex-wrap: nowrap;
+}
+
+#keydata div div p {
+  margin-top: 2px;
+}
+
+#home form {
+  width: 60%;
+  right: 10px;
+}
+
+#logud {
+background-color: var(--bottomgreen);
+padding: 10px;
+width: 100px;
+float: right;
+border-radius: 6px;
+box-shadow: 4px 4px 10px var(--lightgrey);
+right: 2%;
+position: absolute;
+color: white;
+top: 500px;
+}
+
+
+#home, #dashboard, #challenge {
+float: right;
+padding-left: 90px;
+width: 90%;
+}
+
+.bestbox {
+margin-top: 420px;
+width: 48%;
+}
+
+#updateProfile form{
+  z-index: 1000;
+}
+
+#profile {
+position: absolute;
+  width: 48%;
+ right: 0;
+  margin-top: 420px;
+}
+
+.alignleft{
+  margin-top: 0;
+}
+
+#badgets {
+  width: 48%;
+  z-index: 10;
+}
+
+#ekstrainfo {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: calc(100vw - 100px);
+  height: 100px;
+}
+
+#ekstrainfo #keydata {
+  width: 27%;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#borderss{
+    border-left: var(--lightgrey) 2px solid;
+  justify-content: space-between;
+}
+
+/*DASHBOARD DEKSTOP*/
+#mostimportantdash {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+#keydata #onlytwo div {
+  width: 100%;
+}
+
+#rightimpotant{
+  width: 60%;
+  margin: 0;
+  background-color: var(--greytext)
+}
+
+#double {
+  width: 35%;
+flex-direction: row-reverse;
+margin-top: 340px;
+justify-content: space-around;
+margin-right: 1.3%;
+}
+
+.chartjs-render-monitor{
+  background-color: inherit;
+}
+
+#cards {
+  width: 60%;
+  overflow-x: auto;
+  overflow: auto;
+}
+
+.cards{
+  width: 49%;
+  margin-top: 120px;
+}
+
+#thirdcard{
+  position: absolute;
+  width: 30%;
+  right: 2%;
+  top:0;
+}
+
+#footprintfunction {
+  position: absolute;
+  right:1%;
+  width: 35%;
+  top: 600px;
+}
+
+#footprintfunction p {
+  width: 60%;
+}
+
+#footprintberegner{
+  width: 70%;
+  padding-bottom: 10px;
+}
+
+
+
+#dms {
+  display: flex;
+  width: 50%;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  margin-top: -95px;
+}
+
+#dms p {
+  width: 115px;
+  padding: 20px;
+  background-color: var(--greytext);
+  color: white;
+  margin-right: 45px;
+}
+
+#dms p::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  z-index: 1;
+margin-top: -20px;
+margin-left: 40px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent var(--greytext);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle {
+  border-radius: 34px;
+}
+
+.toggle:before {
+  border-radius: 50%;
+}
+
+#dms input:checked + .toggle {
+  background-color: var(--bottomgreen);
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+#dms input:checked + .toggle:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#keydata img {
+  height: 35px;
+  width: 35px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+#detailView.show {
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-between;
+}
+
+#detailView div {
+  width: 47%;
+}
+
+/*---------CHALLENGESIDEN DESKTOP---------------*/
+#allchallenge {
+  display: flex;
+}
+
+
+#challengeleft {
+  width: 30%;
+  margin-right: 25px;
+}
+
+ #challengeright {
+    background-color: #7AABAD;
+    position: absolute;
+    top: 0;
+    right:0;
+    bottom:  0;
+    height: auto;
+    width: 60%;
+    padding-top: 25px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#headlineactive {
+  width: 50%;
+  position: absolute;
+  height: 30px;
+  top:70px;
+}
+
+#flexi {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+#rightinright {
+  width: 100%;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  height: 100%;
+  margin-right: -1px;
+}
+
+#whiteelementactive{
+  width: 50%;
+}
+
+#flexboxen {
+  width: 100%;
+  margin-top: 0;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 0;
+  margin-left: -1px;
+  padding: 10px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+   /*-------------Indtast data DESKTOP---------*/
+   #cowQuest, #feedQuest, #useQuest, #milkQuest {
+     display: none;
+   }
+
+  #backgrounddata img{
+    width: 100%;
+  }
+
+#inputter {
+  background-color: var(--light_background);
+  width: 55%;
+  height: 50%;
+
+
+}
+
+#inputdatacow h5, #inputdatafeed h5, #inputdatause h5, #inputdatamilk h5 {
+  margin-left: 5%;
+  text-align: left;
+  font-size: 20px;
+}
+#inputdatacow, #inputdatafeed, #inputdatause, #inputdatamilk {
+  width: 90%;
+
+
+}
+
+#inputdata label {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5%;
+}
+
+#inputdata input {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  border: var(--lightgrey) 1px solid;
+  border-radius: 10px;
+  font-size: 20px;
+
+}
+#overboks{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#imageboks h4{
+  position: absolute;
+  margin-top: 8%;
+  margin-left:35%;
+  color: green;
+  font-size: 30px;
+  z-index: 4;
+
+}
+
+#imageboks{
+  display: block;
+  width: 45%;
+  position: fixed;
+  height: 100vh;
+  z-index: 2;
+  top: 1%;
+
+}
+#imageboks ul img{
+  left: 35%;
+  margin-top: 70%;
+  list-style: none;
+  position: absolute;
+  text-align: center;
+  z-index: 4;
+width: 30%;
+height: auto;
+
+border-radius: 30px;
+}
+
+
+#hygs img{
+  height: 55%;
+  width: 55%;
+}
+#cowenter{
+  height: 55%;
+  width: 55%;
+}
+#imageboks img{
+  height: 100%;
+  width: 100%;
+object-fit: cover;
+}
+#indtastkasse{
+  width: 55%;
+
+position: absolute;
+right: 0;
+  display: flex;
+  flex-direction: column;
+}
+#indtastkasse h4{
+  display: block;
+  font-size: 30px;
+  margin-bottom: 5%;
+  margin-left: 3%;
+}
+
+.buttongem{
+  margin-top: 20%;
+margin-left: 25%;
+width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  color: white;
+  padding: 20px;
+  margin-bottom: 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5%;
+  color: var(--textgreen);
+}
+
+#overskriftdata{
+  display: none;
+}
+#inputdatacow,#inputdatafeed, #inputdatause, #inputdatamilk{
+  display: flex;
+  height: 50%;
+
+}
+/*-------------loginlaptop---------*/
+#imageloginlaptop{display: flex;
+margin-top: -55px;}
+#imageloginmobil{display: none;}
+#loginkasse{
+
+
+width: 100%;
+height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+
+
+
+
+}
+#logologin{
+
+  position: absolute;
+
+  left: 44%;
+
+
+}
+#billedelogin img{
+  height: 100%;
+  width: 100%;
+
+}
+ #billedelogin{
+   height: 100%;
+   width: 100%;
+
+ }
+#logologin img{
+
+  height: 35%;
+  width: 35%;
+}
+#firebaseui-auth-container {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+
+}
+#tekstlogin{
+  position: absolute;
+  top: 40%;
+  left: 37%;
+}
+#tekstlogin h3{
+  font-size: 30px;
+}
+#tekstlogin h4{
+  font-size: 60px;
+}
+
+
+
+}
